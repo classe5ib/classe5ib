@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Orario Scolastico</title>
+  <title>🏫 - 5°IB Orario Scolastico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./immagini/favicon_16x16.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./immagini/favicon_16x16.png" type="image/x-icon">
   <style>
     body {
       font-family: "Poppins", sans-serif;
@@ -25,6 +28,12 @@
       margin-bottom: 30px;
     }
 
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      margin-bottom: 20px;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -32,6 +41,7 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      min-width: 600px;
     }
 
     body.dark table {
@@ -97,32 +107,74 @@
       background: #374151;
       color: #f9fafb;
     }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 8px;
+        font-size: 0.95rem;
+      }
+
+      h1 {
+        font-size: 1.2rem;
+        margin-bottom: 18px;
+      }
+
+      .table-wrapper {
+        margin-bottom: 12px;
+      }
+
+      table {
+        min-width: 400px;
+        font-size: 0.85rem;
+      }
+
+      th, td {
+        padding: 7px 4px;
+        font-size: 0.85rem;
+      }
+
+      .back-btn {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+        margin-top: 18px;
+      }
+
+      .theme-toggle {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="theme-toggle" onclick="toggleTheme()">🌞</div>
   <h1>Orario Scolastico</h1>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Ora</th>
-        <th>Lunedì</th>
-        <th>Martedì</th>
-        <th>Mercoledì</th>
-        <th>Giovedì</th>
-        <th>Venerdì</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>08:00 - 09:00</td><td>T.P.S.I</td><td>Informatica</td><td>Italiano</td><td>Informatica</td><td>Sistemi & Reti</td></tr>
-      <tr><td>09:00 - 09:55</td><td>T.P.S.I</td><td>Informatica</td><td>Storia</td><td>Informatica</td><td>Sistemi & Reti</td></tr>
-      <tr><td>09:55 - 10:50</td><td>Sistemi & Reti</td><td>G.P.O.I</td><td>Ed. Fisica</td><td>Informatica</td><td>Informatica</td></tr>
-      <tr><td>10:50 - 11:45</td><td>Matematica</td><td>T.P.S.I</td><td>Inglese</td><td>Italiano</td><td>Matematica</td></tr>
-      <tr><td>11:45 - 12:40</td><td>Italiano</td><td>T.P.S.I</td><td>Inglese</td><td>Inglese</td><td>Matematica</td></tr>
-      <tr><td>12:40 - 13:35</td><td>Italiano</td><td>Sistemi & Reti</td><td>G.P.O.I</td><td>G.P.O.I</td><td>Storia</td></tr>
-    </tbody>
-  </table>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Ora</th>
+          <th>Lunedì</th>
+          <th>Martedì</th>
+          <th>Mercoledì</th>
+          <th>Giovedì</th>
+          <th>Venerdì</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>08:00 - 09:00</td><td>T.P.S.I</td><td>Informatica</td><td>Italiano</td><td>Informatica</td><td>Sistemi & Reti</td></tr>
+        <tr><td>09:00 - 09:55</td><td>T.P.S.I</td><td>Informatica</td><td>Storia</td><td>Informatica</td><td>Sistemi & Reti</td></tr>
+        <tr><td>09:55 - 10:50</td><td>Sistemi & Reti</td><td>G.P.O.I</td><td>Ed. Fisica</td><td>Informatica</td><td>Informatica</td></tr>
+        <tr><td>10:50 - 11:45</td><td>Matematica</td><td>T.P.S.I</td><td>Inglese</td><td>Italiano</td><td>Matematica</td></tr>
+        <tr><td>11:45 - 12:40</td><td>Italiano</td><td>T.P.S.I</td><td>Inglese</td><td>Inglese</td><td>Matematica</td></tr>
+        <tr><td>12:40 - 13:35</td><td>Italiano</td><td>Sistemi & Reti</td><td>G.P.O.I</td><td>G.P.O.I</td><td>Storia</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <a href="index.html" class="back-btn">⬅ Torna alla Home</a>
 

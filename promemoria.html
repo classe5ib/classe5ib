@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🗓️ - 5°IB Promemoria Generali</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="./immagini/favicon_16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./immagini/favicon_16x16.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(to bottom right, #c7d2fe, #e0e7ff);
+            margin: 0;
+            padding: 20px;
+            transition: background 0.4s, color 0.4s;
+            color: #1e1e2f;
+        }
+        body.dark {
+            background: linear-gradient(to bottom right, #111827, #1f2937);
+            color: #f9fafb;
+        }
+        h1 {
+            text-align: center;
+            color: #4338ca;
+            margin-bottom: 30px;
+        }
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            min-width: 400px;
+        }
+        body.dark table {
+            background: #1f2937;
+            color: #f9fafb;
+        }
+        th, td {
+            text-align: center;
+            padding: 14px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        th {
+            background-color: #6366f1;
+            color: white;
+        }
+        tr:hover td {
+            background-color: #f1f5f9;
+        }
+        body.dark tr:hover td {
+            background-color: #374151;
+        }
+        .back-btn {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            text-decoration: none;
+            color: white;
+            background: #6366f1;
+            padding: 12px 20px;
+            border-radius: 10px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            background: #4f46e5;
+            transform: scale(1.05);
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #f3f4f6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        body.dark .theme-toggle {
+            background: #374151;
+            color: #f9fafb;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 8px;
+                font-size: 0.95rem;
+            }
+            h1 {
+                font-size: 1.2rem;
+                margin-bottom: 18px;
+            }
+            .table-wrapper {
+                margin-bottom: 12px;
+            }
+            table {
+                min-width: 300px;
+                font-size: 0.85rem;
+            }
+            th, td {
+                padding: 7px 4px;
+                font-size: 0.85rem;
+            }
+            .back-btn {
+                padding: 8px 12px;
+                font-size: 0.95rem;
+                margin-top: 18px;
+            }
+            .theme-toggle {
+                top: 10px;
+                right: 10px;
+                width: 32px;
+                height: 32px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-toggle" onclick="toggleTheme()">🌞</div>
+    <h1>Promemoria Generali</h1>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Descrizione</th>
+                    <th>Materia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mercoledì 15/10/2025</td>
+                    <td>Interrogazioni inglese: Gioielli, Lorido, Ruocco e Tavassi</td>
+                    <td>Inglese</td>
+                </tr>
+                <tr>
+                    <td>Giovedì 16/10/2025</td>
+                    <td>Compito in classe di Informatica</td>
+                    <td>Informatica</td>
+                </tr>
+                <tr>
+                    <td>Giovedì 16/10/2025</td>
+                    <td>Interrogazioni inglese: D'Isanto, Delos e Orecchio.</td>
+                    <td>Inglese</td>
+                </tr>
+                <tr>
+                    <td>Mercoledì 22/10/2025</td>
+                    <td>Interrogazioni inglese: Altamore, Finelli, Parisi e Riccardi.</td>
+                    <td>Inglese</td>
+                </tr>
+                 <tr>
+                    <td>Giovedì 23/10/2025</td>
+                    <td>Interrogazioni inglese: De Felice, Di Costanzo e Illiano.</td>
+                    <td>Inglese</td>
+                    
+                </tr>
+                <tr>
+                    <td>Venerdì 24/10/2025</td>
+                    <td>Compito in classe di Sistemi & Reti</td>
+                    <td>Sistemi & Reti</td>
+                </tr>
+                <tr>
+                    <td>Martedì 28/10/2025</td>
+                    <td>Compito in classe di T.P.S.I</td>
+                    <td>T.P.S.I</td>
+                </tr>
+                <tr>
+                    <td>Mercoledì 29/10/2025</td>
+                    <td>Interrogazioni inglese: Fumo, Lucignano, Aryan e Di Bonito</td>
+                    <td>Inglese</td>
+                </tr>
+                <!-- ...aggiungi altri promemoria qui... -->
+            </tbody>
+        </table>
+    </div>
+    <a href="index.html" class="back-btn">⬅ Torna alla Home</a>
+    <script>
+        const body = document.body;
+        const toggle = document.querySelector('.theme-toggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme === 'dark') {
+            body.classList.add('dark');
+            toggle.textContent = '🌙';
+        }
+
+        function toggleTheme() {
+            body.classList.toggle('dark');
+            const isDark = body.classList.contains('dark');
+            toggle.textContent = isDark ? '🌙' : '🌞';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+    </script>
+</body>
+</html>
